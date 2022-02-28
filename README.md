@@ -1,5 +1,4 @@
 # WristRot
-Wrist Rotation Acquisition
 
 ![Original Logo](https://user-images.githubusercontent.com/86923885/156078560-ba481b78-3307-4d8b-be6a-a3da3e0a3ecf.png)
 
