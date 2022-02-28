@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.wristtracking">
+
+    <application
+        android:allowBackup="true"
+        android:exported="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WristTracking">
+        <activity android:name="com.wristrot.wristtracking.TimerDemo"></activity>
+        <activity android:name="com.wristrot.wristtracking.ResultActivity" />
+        <activity
+            android:name="com.wristrot.wristtracking.StartTrackingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wristrot.wristtracking.NewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wristrot.wristtracking.Activity_DeviceList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wristrot.wristtracking.BluetoothActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wristrot.wristtracking.HistoryDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wristrot.wristtracking.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wristrot.wristtracking.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:node="merge">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service
+            android:name="com.wristrot.wristtracking.WearService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+
+                <data
+                    android:host="*"
+                    android:pathPrefix="/my_path"
+                    android:scheme="wear" />
+            </intent-filter>
+        </service>
+    </application>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+</manifest>

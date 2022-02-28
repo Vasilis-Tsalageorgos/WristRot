@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context="com.wristrot.wristtracking.MainActivity">
+
+    <include
+        android:id="@+id/toolParam"
+        layout="@layout/toolbar"></include>
+
+   <RelativeLayout
+        android:id="@+id/rl_param"
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:layout_below="@+id/toolParam"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_note"
+            android:textStyle="italic"
+            android:layout_width="wrap_content"
+            android:text="Note:"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:text="@string/appinfotext"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/tv_note"
+            android:layout_height="wrap_content"></TextView>
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/imaheParam"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_activity"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:background="@drawable/round_button"
+            android:layout_centerHorizontal="true"
+            android:text="@string/new_activity"></Button>
+
+        <Button
+            android:id="@+id/bt_history"
+            android:layout_below="@+id/bt_activity"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_width="190dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/round_button"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/history_button"></Button>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

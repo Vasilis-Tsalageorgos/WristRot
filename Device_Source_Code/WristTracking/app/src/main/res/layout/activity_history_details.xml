@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/backgroundColor"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbarParam"
+        layout="@layout/toolbar"></include>
+
+
+    <TableRow
+
+        android:id="@+id/firstRow"
+        android:weightSum="4"
+        android:layout_below="@+id/toolbarParam"
+        android:paddingTop="25dp"
+        android:padding="1dp"
+        android:background="@color/buttonColor"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <!-- first element of the row-->
+        <TextView
+
+            android:id="@+id/title1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:text="Date"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <TextView
+
+            android:id="@+id/title2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="18dip"
+            android:text="Activity"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+        <TextView
+
+            android:id="@+id/title3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:text="Time"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <TextView
+
+            android:id="@+id/title4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="18dip"
+            android:text="Rotations/Minute"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+
+
+    </TableRow>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:id="@+id/recyclerView"
+        android:layout_below="@+id/firstRow"
+        android:layout_height="wrap_content"
+        ></androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

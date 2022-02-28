@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/backgroundColor"
+    android:layout_height="match_parent"
+    tools:context="com.wristrot.wristtracking.ResultActivity">
+
+    <include
+        android:id="@+id/toolParam"
+        layout="@layout/toolbar"></include>
+
+    <RelativeLayout
+        android:id="@+id/rl_param"
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolParam"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:text="Activity Name"
+            android:layout_height="wrap_content"></TextView>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_dataParam"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rl_param"
+        android:padding="30dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:text="@string/timing_string"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/tv_time_value"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:text="00:00"
+            android:layout_height="wrap_content"></TextView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_rotation"
+        android:layout_below="@id/rl_dataParam"
+        android:layout_width="match_parent"
+        android:padding="30dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_rotationText"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:text="@string/trackingstring"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/tv_rotationData"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:text="00"
+            android:layout_height="wrap_content"></TextView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_buttonParam"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:padding="30dp"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/bt_save"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:background="@drawable/round_button"
+            android:layout_height="wrap_content"></Button>
+
+        <Button
+            android:id="@+id/bt_discard"
+            android:layout_width="wrap_content"
+            android:text="@string/discard"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/bt_save"
+            android:textColor="@color/white"
+            android:background="@drawable/round_button"
+            android:layout_height="wrap_content"></Button>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
